@@ -3,25 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>HodlInfo</title>
   </head>
   <body>
     <div class="container">
-      <h1>Top 10 Cryptos from WazirX</h1>
+      <h1>Top 10 Results from the API</h1>
       <table class="table">
         <thead>
           <tr>
             <th>Name</th>
-            <th>Last Price</th>
-            <th>Buy Price</th>
-            <th>Sell Price</th>
+            <th>Last Traded</th>
+            <th>Buy</th>
+            <th>Sell</th>
             <th>Volume</th>
             <th>Base Unit</th>
           </tr>
         </thead>
         <tbody>
-          <% result.forEach(function(data) { %>
+          <% for (let data of result) { %>
           <tr>
             <td><%= data.name %></td>
             <td><%= data.last %></td>
@@ -30,7 +30,7 @@
             <td><%= data.volume %></td>
             <td><%= data.base_unit %></td>
           </tr>
-          <% }) %>
+          <% } %>
         </tbody>
       </table>
     </div>
