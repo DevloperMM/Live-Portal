@@ -1,27 +1,83 @@
-.box-container {
-  font-family: "Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Arial, sans-serif";
-  margin: 0 auto;
-  padding: 20px 30px 0 30px;
+body {
+  background-color: #191d28;
+  color: #fff;
+  font-family: "HP Simplified" !important;
+}
+
+.btn {
+  color: #fff !important;
+  margin: 0.5rem;
+  padding: 0.2rem 1rem;
+  background-color: #2e3241;
+  border-radius: 10px;
+  border: 1px solid #2e3241;
+  font-size: 1.1rem;
 }
 
 /* -----Navbar----- */
-.box-container.navbox {
+.navbox {
   display: flex;
   align-items: center;
+  flex: 1;
+  padding: 1rem;
+  margin: 1rem;
+  margin-bottom: 0;
 }
 
 .time {
+  height: 2rem;
+  width: 2rem;
   text-align: center;
-  height: 28px;
-  width: 28px;
-  border: 3px black solid;
-  border-radius: 100%;
+  color: #3dc6c1;
+  border: 3px #3dc6c1 solid;
+  border-radius: 50%;
+}
+
+.logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 60%;
+}
+
+.trade {
+  flex: 1;
+  text-align: center;
+}
+
+.option {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.slider .form-check-input {
+  background-color: #3dc6c1;
+  border-color: #3dc6c1;
+  width: 60px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.tel-btn {
+  background-color: #3dc6c1 !important;
+  margin: 0 20px 0 20px;
 }
 
 /* Highlights */
 .front {
   display: flex;
   justify-content: space-between;
+}
+
+.txt-1 {
+  opacity: 0.5;
+  font-size: 1.15rem;
+  text-align: center;
+  transform: scaleY(1.5);
 }
 
 /* Content */

@@ -1,4 +1,4 @@
 /node_modules
 .env
 test.html
-/public/assets/page.png
+styles.css
