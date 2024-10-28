@@ -25,12 +25,14 @@ body {
 }
 
 .time {
-  height: 2rem;
-  width: 2rem;
-  text-align: center;
+  height: 2.25rem;
+  width: 2.25rem;
   color: #3dc6c1;
   border: 3px #3dc6c1 solid;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
@@ -38,6 +40,7 @@ body {
   display: flex;
   align-items: center;
 }
+
 .logo img {
   width: 60%;
 }
@@ -55,11 +58,34 @@ body {
 }
 
 .slider .form-check-input {
-  background-color: #3dc6c1;
-  border-color: #3dc6c1;
+  background-color: #2e3241;
+  border-color: #2e3241;
   width: 60px;
   height: 32px;
+  position: relative;
   cursor: pointer;
+  border-radius: 16px;
+  transition: 0.2s ease;
+}
+
+.slider .form-check-input::after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  background-color: #3dc6c1;
+  transition: all 0.2s;
+}
+
+.slider .form-check-input:checked {
+  background-color: white;
+}
+
+.slider .form-check-input:checked::after {
+  left: 30px;
 }
 
 .tel-btn {
@@ -73,11 +99,37 @@ body {
   justify-content: space-between;
 }
 
-.txt-1 {
+.txt-1,
+.txt-2 {
   opacity: 0.5;
   font-size: 1.15rem;
   text-align: center;
   transform: scaleY(1.5);
+}
+
+.txt-2 {
+  font-size: 0.8rem;
+}
+
+.percent-period {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.percent {
+  color: #3dc6c1;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.period {
+  opacity: 0.5;
+  transform: scaleX(0.8);
+}
+
+.price {
+  transform: scale(1.5);
 }
 
 /* Content */
