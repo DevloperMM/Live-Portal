@@ -2,6 +2,13 @@ body {
   background-color: #191d28;
   color: #fff;
   font-family: "HP Simplified" !important;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.light-body {
+  background-color: #fff;
+  color: black;
 }
 
 .btn {
@@ -14,13 +21,16 @@ body {
   font-size: 1.1rem;
 }
 
+.trade-light {
+  color: #191d28;
+  background-color: #f8f9fa;
+}
+
 /* -----Navbar----- */
 .navbox {
   display: flex;
   align-items: center;
   flex: 1;
-  padding: 1rem;
-  margin: 1rem;
   margin-bottom: 0;
 }
 
@@ -101,6 +111,7 @@ body {
 
 .txt-1,
 .txt-2 {
+  margin: 1rem;
   opacity: 0.5;
   font-size: 1.15rem;
   text-align: center;
@@ -109,6 +120,7 @@ body {
 
 .txt-2 {
   font-size: 0.8rem;
+  margin: 0;
 }
 
 .percent-period {
@@ -129,7 +141,48 @@ body {
 }
 
 .price {
-  transform: scale(1.5);
+  margin: 0;
+  transform: scale(1.5, 1.5);
+  position: relative;
+  top: 1rem;
 }
 
 /* Content */
+.table-box {
+  margin: 1rem auto;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.75rem;
+}
+
+.row-set.tab-head {
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+.row-set.tab-body {
+  background-color: #2e3348;
+  border-radius: 2rem;
+  transition: 0.2s;
+}
+
+.row-set.tab-light-body {
+  background-color: #f8f9fa;
+  color: black;
+}
+
+.row-set.body:hover {
+  transform: scale(1.02);
+}
+
+td,
+th {
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+th {
+  font-size: 1.1rem;
+  transform: scaleY(1.2);
+}

@@ -1,26 +1,20 @@
-<div class="box-container">
-  <table class="table">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Name</th>
-        <th>Last Traded</th>
-        <th>Buy / Sell Price</th>
-        <th>Volume</th>
-        <th>Base Unit</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% count = 0; for (let data of result) { %>
-      <tr>
-        <td><%= ++count %></td>
-        <td><%= data.name %></td>
-        <td><%= data.last %></td>
-        <td><%= data.buy %> / <%= data.sell %></td>
-        <td><%= data.volume %></td>
-        <td><%= data.base_unit %></td>
-      </tr>
-      <% } %>
-    </tbody>
-  </table>
-</div>
+<table class="table-box">
+  <tr class="row-set tab-head">
+    <th>#</th>
+    <th>Platform</th>
+    <th>Last Traded Price</th>
+    <th>Buy / Sell Price</th>
+    <th>Volume</th>
+    <th>Base_unit</th>
+  </tr>
+  <% count = 0; for (let data of result) { %>
+  <tr class="row-set tab-body">
+    <td><%= ++count %></td>
+    <td><%= data.name %></td>
+    <td>&#8377; <%= data.last.toLocaleString("en-IN") %></td>
+    <td>&#8377; <%= data.buy %> / &#8377; <%= data.sell %></td>
+    <td><%= data.volume %></td>
+    <td><%= data.base_unit %></td>
+  </tr>
+  <% } %>
+</table>
